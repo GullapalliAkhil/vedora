@@ -1022,8 +1022,11 @@ footer::before {
 
 /* ── Responsive ────────────────────────── */
 @media (max-width: 768px) {
+  .nav-inner { padding: 0 16px; height: 64px; }
+  .logo { font-size: 1.35rem; gap: 8px; flex-shrink: 0; }
+  .logo-icon { width: 36px; height: 36px; font-size: .9rem; border-radius: 10px; }
   .nav-links {
-    position: fixed; top: 76px; left: 0; right: 0;
+    position: fixed; top: 64px; left: 0; right: 0;
     background: rgba(10,14,23,.97); flex-direction: column;
     padding: 28px; gap: 20px;
     border-bottom: 1px solid var(--border);
@@ -1032,8 +1035,9 @@ footer::before {
     transform: translateY(-120%); transition: transform .4s cubic-bezier(.4,0,.2,1);
   }
   .nav-links.open { transform: translateY(0); }
+  .nav-cta { padding: 10px 20px; font-size: .85rem; }
   .hamburger { display: flex; }
-  .hero { padding: 100px 20px 60px; }
+  .hero { padding: 90px 16px 60px; }
   .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
   .hero h1 { font-size: 2.2rem; word-break: break-word; }
   .hero p { margin: 0 auto 32px; font-size: 1rem; }
@@ -1078,11 +1082,18 @@ footer::before {
   .call-btn { padding: 14px 28px; font-size: 1rem; }
 }
 @media (max-width: 480px) {
+  .nav-inner { padding: 0 12px; height: 60px; }
+  .logo { font-size: 1.2rem; gap: 6px; }
+  .logo-icon { width: 32px; height: 32px; font-size: .8rem; border-radius: 8px; }
+  .nav-links { top: 60px; }
+  .nav-cta { padding: 9px 16px; font-size: .82rem; }
+  .hero { padding: 80px 14px 48px; }
   .hero h1 { font-size: 1.85rem; }
   .hero p { font-size: .95rem; }
   .hero-card-content .door-icon { font-size: 3rem; }
   .hero-card-content h3 { font-size: 1.1rem; }
   .hero-card-content p { font-size: .85rem; }
+  .mission { padding: 48px 14px; }
   .mission-pillars { grid-template-columns: 1fr 1fr; gap: 10px; }
   .mission-statement h2 { font-size: 1.6rem; }
   .footer-inner { grid-template-columns: 1fr; gap: 28px; }
@@ -1094,10 +1105,11 @@ footer::before {
   .enq-ring { width: 64px; height: 64px; margin-bottom: 20px; }
   .enq-ring-inner { width: 52px; height: 52px; font-size: 1.6rem; }
   .enq-badge { font-size: .78rem; padding: 5px 16px; }
-  .section { padding: 48px 16px; }
-  .page-hero { padding: 110px 16px 48px; }
+  .section { padding: 48px 14px; }
+  .page-hero { padding: 100px 14px 48px; }
   .page-hero h1 { font-size: 1.85rem; }
   .pano { padding: 32px 0; }
   .pano-frame { border-radius: 8px; }
   .pano-header h2 { font-size: 1.5rem; }
+  .pano-header { padding: 0 14px; }
 }
