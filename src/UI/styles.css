@@ -241,7 +241,7 @@ h1, h2, h3, h4 {
 }
 .hero-badge span { font-size: 1rem; }
 .hero h1 {
-  font-size: 4.2rem; line-height: 1.08; margin-bottom: 24px;
+  font-size: clamp(1.85rem, 5vw, 4.2rem); line-height: 1.08; margin-bottom: 24px;
   color: var(--text-primary); font-weight: 700;
 }
 .hero h1 .highlight {
@@ -1033,38 +1033,71 @@ footer::before {
   }
   .nav-links.open { transform: translateY(0); }
   .hamburger { display: flex; }
-  .hero-inner { grid-template-columns: 1fr; text-align: center; }
-  .hero h1 { font-size: 2.6rem; }
-  .hero p { margin: 0 auto 32px; }
+  .hero { padding: 100px 20px 60px; }
+  .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+  .hero h1 { font-size: 2.2rem; word-break: break-word; }
+  .hero p { margin: 0 auto 32px; font-size: 1rem; }
   .hero-buttons { justify-content: center; }
-  .hero-visual { margin-top: 40px; }
-  .mission-pillars { grid-template-columns: repeat(2, 1fr); }
-  .mission-statement h2 { font-size: 2rem; }
-  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .hero-visual { margin-top: 20px; }
+  .hero-card { max-width: 100%; aspect-ratio: auto; }
+  .hero-card-content { padding: 28px 20px; }
+  .hero-card-content .door-icon { font-size: 3.5rem; }
+  .hero-card-content h3 { font-size: 1.3rem; }
+  .mission { padding: 64px 20px; }
+  .mission-pillars { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .mission-statement h2 { font-size: 1.8rem; }
+  .mission-statement p { font-size: 1rem; }
+  .pillar { padding: 24px 14px; }
+  .pillar h4 { font-size: .9rem; }
+  .pillar p { font-size: .8rem; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
   .floating-badge { display: none; }
-  .page-hero h1 { font-size: 2.4rem; }
-  .enq-hero h1 { font-size: 2.4rem; }
-  .enq-number { font-size: 2rem; }
-  .enq-card { padding: 36px 24px 28px; }
-  .enq-hero { padding: 100px 20px 60px; }
-  .section { padding: 80px 24px; }
-  .section-header h2 { font-size: 2rem; }
-  .pano-frame { border-radius: 12px; }
-  .pano-header h2 { font-size: 2rem; }
-  .pano-header { margin-bottom: 32px; }
+  .page-hero { padding: 120px 20px 60px; }
+  .page-hero h1 { font-size: 2.2rem; }
+  .page-hero p { font-size: 1rem; }
+  .enq-hero h1 { font-size: 2.2rem; }
+  .enq-number { font-size: 1.8rem; word-break: break-all; }
+  .enq-card { padding: 32px 20px 24px; }
+  .enq-hero { padding: 100px 16px 60px; }
+  .enq-sub { font-size: 1rem; }
+  .enq-buttons { flex-direction: column; align-items: center; }
+  .section { padding: 64px 20px; }
+  .section-header { margin-bottom: 48px; }
+  .section-header h2 { font-size: 1.8rem; }
+  .section-header p { font-size: 1rem; }
+  .why-grid { grid-template-columns: 1fr; gap: 16px; }
+  .why-card { padding: 28px 22px; }
+  .products-grid { grid-template-columns: 1fr; }
+  .pano { padding: 48px 0; }
+  .pano-frame { border-radius: 12px; margin: 0 12px; }
+  .pano-progress { margin-left: 12px; margin-right: 12px; }
+  .pano-header h2 { font-size: 1.8rem; }
+  .pano-header { margin-bottom: 32px; padding: 0 20px; }
+  .btn { padding: 13px 24px; font-size: .9rem; }
+  .call-btn { padding: 14px 28px; font-size: 1rem; }
 }
 @media (max-width: 480px) {
-  .hero h1 { font-size: 2.1rem; }
-  .mission-pillars { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .products-grid { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
-  .phone-number { font-size: 1.6rem; }
-  .enquiry-box { padding: 36px 20px; }
-  .enq-hero h1 { font-size: 2rem; }
-  .enq-number { font-size: 1.8rem; }
-  .enq-card { padding: 32px 20px 24px; }
-  .section { padding: 64px 20px; }
-  .pano { padding: 40px 0; }
+  .hero h1 { font-size: 1.85rem; }
+  .hero p { font-size: .95rem; }
+  .hero-card-content .door-icon { font-size: 3rem; }
+  .hero-card-content h3 { font-size: 1.1rem; }
+  .hero-card-content p { font-size: .85rem; }
+  .mission-pillars { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .mission-statement h2 { font-size: 1.6rem; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+  .phone-number { font-size: 1.4rem; }
+  .enquiry-box { padding: 28px 16px; }
+  .enq-hero h1 { font-size: 1.85rem; }
+  .enq-number { font-size: 1.5rem; }
+  .enq-card { padding: 28px 16px 20px; }
+  .enq-ring { width: 64px; height: 64px; margin-bottom: 20px; }
+  .enq-ring-inner { width: 52px; height: 52px; font-size: 1.6rem; }
+  .enq-badge { font-size: .78rem; padding: 5px 16px; }
+  .section { padding: 48px 16px; }
+  .page-hero { padding: 110px 16px 48px; }
+  .page-hero h1 { font-size: 1.85rem; }
+  .pano { padding: 32px 0; }
   .pano-frame { border-radius: 8px; }
+  .pano-header h2 { font-size: 1.5rem; }
 }
